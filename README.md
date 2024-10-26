@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-contact-form-using-bootstrap-diIEKXU3KX).com)
 - Live Site URL: (https://contact-form-form.netlify.app/)
 
 ## My process
@@ -69,6 +69,6 @@ I plan on further study in javascript as there is a lot of room for improvement 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Lordson Fafa Borngreat](https://www.your-site.com)
 - Frontend Mentor - [@lordsonfafa](https://www.frontendmentor.io/profile/lordsonfafa)
 - Instagram - [@lf_borngreat](https://www.instagram.com/lf_borngreat)
