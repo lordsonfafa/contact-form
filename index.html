@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="d-flex"
+    style="height: 100vh; background-color: hsl(148, 38%, 91%)"
+  >
+    <form
+      action=""
+      class="container w-auto h-auto m-auto bg-white rounded needs-validation"
+      novalidate
+    >
+      <h2 class="text-success">Contact Us</h2>
+      <div class="row mb-3">
+        <div class="col col-12 col-md-6">
+          <label for="firstname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstname" required />
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="col col-12 col-md-6">
+          <label for="lastname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastname" required />
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+      </div>
+      <!-- email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" required />
+        <div class="invalid-feedback">Please enter a valid email address</div>
+      </div>
+      <!-- query -->
+      <div class="mb-3">
+        <div class="container">
+          <label for="">Query Type</label>
+          <div class="row">
+            <div class="col col-12 col-md-6 border rounded mb-2">
+              <input
+                required
+                type="radio"
+                class="form-check-input"
+                id="generalquery"
+                name="query"
+              />
+              <label for="generalquery" class="form-label"
+                >General Enquiry</label
+              >
+              <div class="invalid-feedback">Please select a query type</div>
+            </div>
+            <div class="col col-12 col-md-6 border rounded mb-2">
+              <input
+                required
+                type="radio"
+                class="form-check-input"
+                id="supportquery"
+                name="query"
+              />
+              <label for="supportquery" class="form-label" id="query"
+                >Support Request</label
+              >
+              <div class="invalid-feedback">Please select a query type</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea name="" id="message" class="form-control" required></textarea>
+        <div class="invalid-feedback">This field is required</div>
+      </div>
+      <!-- consent -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="consent" required />
+        <label for="consent" class="form-label"
+          >I consent to being contacted by the team
+        </label>
+        <div class="invalid-feedback">please consent to being contacted</div>
+      </div>
+      <!-- submit -->
+      <button type="submit" class="btn btn-success w-100" id="showtoast">
+        Submit
+      </button>
+      <div class="toast-container position-fixed top-0">
+        <div class="toast" id="mytoast">
+          <div class="toast-header text-bg-success">
+            <img
+              src="assets/images/icon-success-check.svg"
+              alt=""
+              class="toast-img"
+            />Message Sent!
+          </div>
+          <div class="toast-body text-bg-success">
+            Thanks for completing the form. We'll be in touch soon!
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution mb-3">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </form>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const form = document.querySelector(".needs-validation");
+      const toastEl = document.querySelector("#mytoast");
+      const toast = bootstrap.Toast.getOrCreateInstance(toastEl);
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (form.checkValidity()) {
+          toast.show();
+          form.reset();
+          form.classList.remove("was-validated");
+        } else {
+          form.classList.add("was-validated");
+        }
+      });
+    </script>
+  </body>
+</html>
